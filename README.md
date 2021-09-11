@@ -11,7 +11,7 @@
   <p align="center">
     Handy tool to read the news
     <br />
-    <a href="https://github.com/mohitm15/NewsReader-2.0e"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/mohitm15/NewsReader-2.0"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/github_username/repo_name">View Demo</a>
