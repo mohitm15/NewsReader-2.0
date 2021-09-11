@@ -38,6 +38,7 @@ const News = (props) => {
   useEffect(() => {
     updateNews();
     document.title = `NewsReader2 - ${capitilizeFirstLetter(props.category)}`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
 
