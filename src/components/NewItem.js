@@ -4,9 +4,14 @@ const NewItem = (props) => {
 
     let { title, description, imageUrl, newsUrl, author, publishedAt, source } = props;
 
+    
+    
+
+
+
     return (
-      <div className="my-3">
-        <div className="card" style={{border:'0.1px groove #808183'}} >
+      <div className="my-3" >
+        <div className="card" style={props.darkmodeStyle} >
           <div style={{ display:'flex',alignItems:'flex-end',right:'0',position:'absolute' }}>
             <span
               className="badge rounded-pill bg-primary"

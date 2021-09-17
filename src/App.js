@@ -11,13 +11,35 @@ const App = () => {
 
   const [progress, setProgress] = useState(0);
   const apikey = process.env.REACT_APP_NEWS_API;
-
-
+  const [mode, setmode] = useState("light")
+  const [darkmodeStyle, setDarkmodeStyle] = useState({
+    backgroundColor:"white",
+    color:"black",
+  });
+  
+  const togglemode = () => {
+    if(mode === 'light'){
+      setmode('dark');
+      document.body.style.backgroundColor="#0d1117";
+      setDarkmodeStyle({
+        backgroundColor:"#0d1117",
+        color:"#c9d1d9",
+      });
+    }
+    else {
+      setmode('light');
+      document.body.style.backgroundColor="white";
+      setDarkmodeStyle({
+        backgroundColor:"white",
+        color:"black",
+      });
+    }
+  }
 
   return (
     <div>
       <Router>
-        <NavBar />
+        <NavBar mode={mode} togglemode={togglemode} />
         <LoadingBar
           height={3}
           shadow="true"
@@ -34,6 +56,9 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="general"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
+
             />{" "}
           </Route>
           <Route exact path="/business">
@@ -45,6 +70,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="business"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/entertainment">
@@ -56,6 +83,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="entertainment"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/health">
@@ -67,6 +96,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="health"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/general">
@@ -78,6 +109,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="general"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/science">
@@ -89,6 +122,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="science"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/sports">
@@ -100,6 +135,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="sports"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
           <Route exact path="/technology">
@@ -111,6 +148,8 @@ const App = () => {
               pageSize={pageSize}
               country="in"
               category="technology"
+              darkmodeStyle={darkmodeStyle}
+              mode={mode}
             />{" "}
           </Route>
         </Switch>

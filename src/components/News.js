@@ -13,8 +13,9 @@ const News = (props) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
-  const [totalResults, setTotalResults] = useState(0)
-
+  const [totalResults, setTotalResults] = useState(0);
+  
+  
 
 
   
@@ -54,13 +55,12 @@ const News = (props) => {
   };
 
     return (
-      <>
+      <div style={props.darkmodeStyle}>
         <h1 className="text-center" style={{ margin: "35px 0px", marginTop:'5%' }}>
           New Reader2 - By Mohit Maroliya
         </h1>
-
         <div
-          className="alert alert-success text-center"
+          className={`alert alert-${props.mode === 'light' ? 'primary':'custom'} text-center`}
           role="alert"
           style={{ fontSize: "150%", fontWeight: 700 }}
         >
@@ -96,6 +96,7 @@ const News = (props) => {
                       publishedAt={item.publishedAt}
                       author={item.author ? item.author : "Anonymous"}
                       source={item.source.name}
+                      darkmodeStyle={props.darkmodeStyle}
                     />
                   </div>
                 );
@@ -103,7 +104,7 @@ const News = (props) => {
             </div>
           </div>
         </InfiniteScroll>
-      </>
+      </div>
     );
   
 }

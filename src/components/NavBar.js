@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" >
+      <nav className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark`} >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             NewsReader2
@@ -63,6 +63,10 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+          <div className={`form-check form-switch text-light`}>
+            <input className="form-check-input" onClick={props.togglemode} type="checkbox" id="flexSwitchCheckDefault"/>
+            <label className="form-check-label" for="flexSwitchCheckDefault">{props.mode}mode ON </label>
           </div>
         </div>
       </nav>
