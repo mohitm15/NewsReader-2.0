@@ -113,12 +113,14 @@ See the preview of the site
 </p>
 
 
-
+### Light Theme
 
 ![Screenshot from 2021-09-10 16-31-13](https://user-images.githubusercontent.com/35539313/132951122-25e34dc5-577c-4fa8-bdcb-a2f584e13bb1.png)
 
 
+### Dark Theme
 
+![Screenshot from 2021-09-17 17-41-30](https://user-images.githubusercontent.com/35539313/133781154-c83e642f-e522-44e9-8e8d-7274b14b770e.png)
 
 
 <!-- CONTRIBUTING -->
