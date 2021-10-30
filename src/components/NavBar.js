@@ -1,7 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const NavBar = (props) => {
+
+  let location = useLocation();
+
   return (
     <div>
       <nav className={`navbar navbar-expand-lg fixed-top navbar-dark bg-dark`} >
@@ -23,42 +26,42 @@ const NavBar = (props) => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className={`nav-link ${location.pathname === '/'? "active":""}`} aria-current="page" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/business">
+                <Link className={`nav-link ${location.pathname === '/business'? "active":""}`} to="/business">
                   Business
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/entertainment">
+                <Link className={`nav-link ${location.pathname === '/entertainment'? "active":""}`} to="/entertainment">
                   Entertainment
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/general">
+                <Link className={`nav-link ${location.pathname === '/general'? "active":""}`} to="/general">
                   General
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/health">
+                <Link className={`nav-link ${location.pathname === '/health'? "active":""}`} to="/health">
                   Health
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/science">
+                <Link className={`nav-link ${location.pathname === '/science'? "active":""}`} to="/science">
                   Science
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/sports">
+                <Link className={`nav-link ${location.pathname === '/sports'? "active":""}`} to="/sports">
                   Sports
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/technology">
+                <Link className={`nav-link ${location.pathname === '/technology'? "active":""}`} to="/technology">
                   Technnology
                 </Link>
               </li>
@@ -66,7 +69,7 @@ const NavBar = (props) => {
           </div>
           <div className={`form-check form-switch text-light`}>
             <input className="form-check-input" onClick={props.togglemode} type="checkbox" id="flexSwitchCheckDefault"/>
-            <label className="form-check-label" for="flexSwitchCheckDefault">{props.mode}mode ON </label>
+            <label className="form-check-label" htmlFor="flexSwitchCheckDefault">{props.mode}mode ON </label>
           </div>
         </div>
       </nav>
