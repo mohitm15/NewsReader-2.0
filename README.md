@@ -148,5 +148,5 @@ Project Link: [https://github.com/mohitm15/NewsReader-2.0](https://github.com/mo
 
 
 
-
+>  _Project is NOT deployed because NewsAPI.org allows to use API in production mode for premium memebers only_
 
