@@ -14,7 +14,7 @@
     <a href="https://github.com/mohitm15/NewsReader-2.0"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://61dfdf9a11562b000777306d--nostalgic-agnesi-31ca8f.netlify.app/">View Demo</a>
     
     
   </p>
